@@ -1,0 +1,41 @@
+p.gray{
+    color: #808080;
+}
+
+div.gray_form {
+    background-color: #ebebeb;
+    padding: 20px;
+    max-width: 1000px;
+}
+div.gray_form p{
+    color: #666666;
+    max-width:500px;
+}
+td.gray div{
+    max-width: 400px;
+    color: #666666;
+    float: left;
+}
+
+td.input {
+    max-width: 27em;
+}
+
+div.success {
+    background: url("img/success.png") no-repeat scroll left center transparent;
+    font-size: 110%;
+    font-weight: bold;
+    margin-left: 10px;
+    max-width: 500px;
+    padding: 20px 20px 20px 80px;
+    margin-bottom: 15px;
+}
+p.small {
+    font-size: 70%;
+}
+input.regular-text{
+    width: 18em;
+}
+.form-table td {
+    vertical-align: top;
+}
