@@ -1,3 +1,3 @@
 # raychat
 
-test project
+The official WHMCS plugin
