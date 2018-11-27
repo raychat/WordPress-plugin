@@ -1,2 +1,3 @@
-# WordPress-plugin
-The official WordPress plugin
+# raychat
+
+test project

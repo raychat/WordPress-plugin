@@ -6,7 +6,7 @@
  * Author URI: www.raychat.io
  * Plugin URI: www.raychat.io
  * Description: افزونه وردپرس گفتگوی آنلاین رایچت | با مشتریانتون صحبت کنید ، پشتیبانی کنید و از فروش خود لذت ببرید :)
- * Version: 1.0
+ * Version: 1.0.4
  *
  * Text Domain:   raychat
  * Domain Path:   /
@@ -16,13 +16,13 @@ if (!defined('ABSPATH')) {
 }
 
 load_plugin_textdomain('raychat', PLUGINDIR . '/' . dirname(plugin_basename(__FILE__)));
+
 $lang = get_bloginfo("language");
 $raychat_addr = 'https://www.raychat.io';
 
 
 define("RAYCHAT_LANG", substr($lang, 0, 2));
 
-define("RAYCHAT_URL", "https://raychat.io/admin");
 define("RAYCHAT_WIDGET_URL", "raychat.io");
 define("RAYCHAT_URL", $raychat_addr);
 define("RAYCHAT_INTEGRATION_URL", RAYCHAT_URL . "/integration");
@@ -192,7 +192,6 @@ class raychat {
             $this->widget_id = $_POST['widget_id'];
             $this->save();
         } elseif (isset($_POST['email']) && isset($_POST['userPassword'])) {
-            // получаем данные для запроса
             $query = $_POST;
             $query['siteUrl'] = get_site_url();
             $query['partnerId'] = "wordpress";
@@ -215,7 +214,7 @@ class raychat {
             } else {
                 $useCurl = true;
             }
-            // отправляем запрос
+           
             try {
                 $path = RAYCHAT_INTEGRATION_URL . "/install";
                 if (!extension_loaded('openssl')) {
@@ -311,8 +310,6 @@ class raychat {
     }
 
     public function save() {
-//        do_settings_sections( __FILE__ );
-
         update_option('raychat_widget_id', $this->widget_id);
         update_option('raychat_token', $this->token);
     }
