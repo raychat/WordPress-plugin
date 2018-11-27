@@ -1,4 +1,4 @@
 # Raychat
 
-The official WHMCS plugin
+The official WordPress plugin
  
