@@ -64,7 +64,7 @@ function raychatInstall() {
 }
 
 function raychatDelete() {
-    return raychat::getInstance()->delete();
+    
 }
 
 function raychatAppend() {
