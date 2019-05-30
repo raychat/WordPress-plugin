@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
     die("go away!");
 }
 
-load_plugin_textdomain('raychat', PLUGINDIR . '/' . dirname(plugin_basename(__FILE__)));
+load_plugin_textdomain('raychat', false, PLUGINDIR . '/' . dirname(plugin_basename(__FILE__)));
 
 $lang = get_bloginfo("language");
 $raychat_addr = 'https://www.raychat.io';
